@@ -1,25 +1,47 @@
-public class Lights {
-    String color;
-    static String[][] floor1;
-    static String[][] floor2;
-    static String[][] floor3;
-    static String[][] floor4;
+import java.util.Random;
 
-    public Lights(String color) {
-        this.color = color;
+public class Lights {
+    static String[][] floor1 = new String[8][2];
+    static String[][] floor2 = new String[8][2];
+    static String[][] floor3 = new String[8][2];
+    static String[][] floor4 = new String[8][2];
+    static String[] colors = { "green", "red", "blue", "magenta", "orange" };
+
+    public Lights() {
+        setLights();
+        // drawLights(1);
+    }
+
+    public static void setLights() {
+        Random rand = new Random();
+
+        for (int r = 0; r < floor1.length; r++) {
+            for (int c = 0; c < floor1[r].length; c++) {
+                floor1[r][c] = colors[rand.nextInt(50) / 10];
+            }
+        }
+
+        for (int r = 0; r < floor2.length; r++) {
+            for (int c = 0; c < floor2[r].length; c++) {
+                floor2[r][c] = colors[rand.nextInt(50) / 10];
+            }
+        }
+
+        for (int r = 0; r < floor3.length; r++) {
+            for (int c = 0; c < floor3[r].length; c++) {
+                floor3[r][c] = colors[rand.nextInt(50) / 10];
+            }
+        }
+
+        for (int r = 0; r < floor4.length; r++) {
+            for (int c = 0; c < floor4[r].length; c++) {
+                floor4[r][c] = colors[rand.nextInt(50) / 10];
+            }
+        }
 
     }
 
     public static void drawLights(int floor) {
-        switch (floor) {
-        case 1:
-            for (int r = 0; r < floor1.length; r++) {
-                for (int c = 0; c < floor1.length; c++) {
-
-                }
-            }
-            break;
-        }
 
     }
 

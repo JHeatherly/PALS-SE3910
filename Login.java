@@ -72,7 +72,6 @@ public class Login {
                 }
             }
             // The above is for picking a username.
-            test = input.nextLine();
 
             if (!goodPword) {
                 if (!test.matches(".{4,10}")) {

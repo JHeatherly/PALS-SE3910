@@ -63,7 +63,7 @@ public class DrawFloors extends javax.swing.JFrame {
             }
         });
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/mycompany/se3910/parkinglot.jpg"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("parkinglot.jpg"))); // NOI18N
         jLabel1.setText("jLabel1");
 
         up.setText("Go Up");
@@ -78,7 +78,7 @@ public class DrawFloors extends javax.swing.JFrame {
         jTextArea5.setRows(5);
         jTextArea5.setText("Current Floor: " + currFloor);
         jScrollPane5.setViewportView(jTextArea5);
-
+        Lights lights = new Lights();
         jTextArea6.setColumns(20);
         jTextArea6.setRows(5);
         jTextArea6.setText("Floor 3: " + Lights.getFloor3Count());
@@ -171,23 +171,12 @@ public class DrawFloors extends javax.swing.JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 currFloor += 1;
-                initComponents();
+                draw();
             }
         });
     }
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        // <editor-fold defaultstate="collapsed" desc=" Look and feel setting code
-        // (optional) ">
-        /*
-         * If Nimbus (introduced in Java SE 6) is not available, stay with the default
-         * look and feel. For details see
-         * http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html
-         */
+    public static void draw() {
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {
@@ -218,7 +207,7 @@ public class DrawFloors extends javax.swing.JFrame {
         });
     }
 
-    // Variables declaration - do not modify
+    // Variables declaration - CLEAN UP LATER
     private javax.swing.JButton down;
     private javax.swing.JButton up;
     private javax.swing.JLabel jLabel1;
