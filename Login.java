@@ -41,7 +41,6 @@ public class Login {
         ArrayList<String> uname = new ArrayList<>();
         ArrayList<String> pword = new ArrayList<>();
         Scanner input = new Scanner(System.in);
-        HashMap<String, String> accounts = new HashMap<String, String>();
         // I figured the login info could alternatively be stored in a hash table...
 
         // uname.add("pizza");
@@ -90,9 +89,6 @@ public class Login {
             role = input.nextLine();
         }
         // This section has the user choose a password.
-
-        accounts.put(use, pass);
-        // This puts the account into the hash table.
 
         Account person = new Account(use, pass);
         // This creates the account object.
