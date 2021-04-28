@@ -238,12 +238,6 @@ public class DrawFloors extends javax.swing.JFrame {
                 floor1.setText("Floor 1: " + Lights.getFloor1Count());
                 floor4.setText("Floor 4: " + Lights.getFloor4Count());
                 floor2.setText("Floor 2: " + Lights.getFloor2Count());
-                sensor.powerOut();
-                currFloorText.setText("Current Floor: N/A\nAll Floor Count: N/A");
-                floor3.setText("Floor 3: N/A");
-                floor1.setText("Floor 1: N/A");
-                floor4.setText("Floor 4: N/A");
-                floor2.setText("Floor 2: N/A");
                 getContentPane().setLayout(layout);
                 layout.setHorizontalGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addGroup(layout.createSequentialGroup().addContainerGap().addGroup(layout
